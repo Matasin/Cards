@@ -1,9 +1,13 @@
 body {
     padding: 1em;
+    letter-spacing: 1px;
 }
 * {font-family: 'Roboto Light', 'Roboto Medium', 'Roboto'}
-.right { float: right; }
-.left { float: left; }
+.Right { float: right; }
+.Left { float: left; }
+
+.Hide { display: none; }
+.Show { display: block; }
 
 
 .CardContainer {
@@ -13,6 +17,7 @@ body {
     border-radius: 1.5em;
     padding: 1em 0;
 
+    background: linear-gradient(#eeeeee  0%, #ffffff 50%, #eeeeee 100%);
     -webkit-box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.28);
     -moz-box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.28);
     box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.28);
@@ -22,35 +27,83 @@ body {
     height: 100%;
     width: 90%;
     text-align: center;
+    position: relative;
 
     border-right: 1px solid gray;
     border-left: 1px solid gray;;
-    border-radius: 5%;
 }
 .Card img {
     border-radius: 50%;
     border: 1px solid #2E2E2E;
 }
-.Greeting{
-    font-weight: 500;
+
+.Presentation{
+    margin-top: 3vh;
+    font-size: 2em;
+}
+.Presentation div:nth-child(1){
+    color: gray;
+}
+.Presentation div:nth-child(2){
+    margin-top: 2vh;
+}
+
+.InformationButtons{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 5%;
 }
 .HoverButtons__InformationButtons {
-    margin: 10% 5%;
     display: flex;
     justify-content: space-around;
 }
+.HoverButtons__InformationButtons button {
+    border-radius: 30%;
+    cursor: pointer;
 
-@media (max-width: 600px) {
+    background: transparent;
+    outline: none;
+    border: none;
+
+    transition: all 0.3s ease;
+}
+.HoverButtons__InformationButtons button:hover {
+    transform: rotate(360deg);
+    background-color: rgb(151, 129, 129);
+}
+.HoverButtons__InformationButtons button:active {
+    transform: scale(0.8);
+}
+
+@media (max-width: 900px) {
+    h1, p{
+        font-size: 1.5em;
+    }
+    .Presentation{
+        font-size: 1.25em;
+    }
+    button{
+        width: 25%;
+    }
     .CardContainer {
         width: 100%;
     }
-    a{
-        transform: scale(0.75);
+    .InformationButtons {
+        transform: scale(0.70);
     }
   }
 @media (max-width: 900px) and (orientation: landscape) { 
-      .CardContainer{
+    img {
+        height: 25vh;
+    }
+    .CardContainer{
         width: 55%;
-        height: 90%;
-      }
+        height: 100%;
+    }
+    .InformationButtons {
+        bottom: -35vh;
+    }
    }
