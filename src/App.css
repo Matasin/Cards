@@ -1,0 +1,56 @@
+body {
+    padding: 1em;
+}
+* {font-family: 'Roboto Light', 'Roboto Medium', 'Roboto'}
+.right { float: right; }
+.left { float: left; }
+
+
+.CardContainer {
+    margin: 10vh auto;
+    height: 50vh;
+    width: 50%;
+    border-radius: 1.5em;
+    padding: 1em 0;
+
+    -webkit-box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.28);
+    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.28);
+}
+.Card {
+    margin: auto;
+    height: 100%;
+    width: 90%;
+    text-align: center;
+
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;;
+    border-radius: 5%;
+}
+.Card img {
+    border-radius: 50%;
+    border: 1px solid #2E2E2E;
+}
+.Greeting{
+    font-weight: 500;
+}
+.HoverButtons__InformationButtons {
+    margin: 10% 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+    .CardContainer {
+        width: 100%;
+    }
+    a{
+        transform: scale(0.75);
+    }
+  }
+@media (max-width: 900px) and (orientation: landscape) { 
+      .CardContainer{
+        width: 55%;
+        height: 90%;
+      }
+   }

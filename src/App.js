@@ -1,8 +1,8 @@
 import React from "react";
-
 import './App.css';
-import Game from "./components/Game";
 
-const App = () => <Game />
+import CardContainer from "./components/CardContainer";
+
+const App = () => <CardContainer />
 
 export default App;
