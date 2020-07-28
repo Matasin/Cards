@@ -21,9 +21,9 @@ class CardContainer extends React.Component {
         if (this.state.loading) {
             return <div style={{textAlign: 'center'}}>Something went wrong with loading data user :(</div>
         }
-        if (!this.state.user) {
-            return <div>Did not get a person</div>
-        }
+        // if (!this.state.user) {
+        //     return <div>Did not get a person</div>
+        // }
 
         const user = this.state.user; //
         return (
